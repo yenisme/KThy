@@ -1,0 +1,9 @@
+#!name=SoundCloudPlus-KhongManhYen
+#!desc=SoundCloudPlus-HongTranKhanhThy
+# 👤 Author: KhongManhYen🥑
+# 💬 Infome: https://bit.ly/yenisme  
+# 🚀 Released by: Khổng Mạnh Yên 
+[Script]
+SoundCloudGo+=type=http-response,pattern=https://api-mobile.soundcloud.com/configuration/ios,requires-body=1,script-path=https://raw.githubusercontent.com/Marol62926/MarScrpt/main/soundcloud.js
+[MITM]
+hostname= %APPEND% api-mobile.soundcloud.com
