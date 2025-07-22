@@ -1,0 +1,17 @@
+// Script mở khóa Locket Gold - by Kthy
+let obj = JSON.parse($response.body);
+obj.subscriber = obj.subscriber || {};
+obj.subscriber.subscriptions = {
+  "com.locket.gold.yearly": {
+    "expires_date": "2099-12-31T23:59:59Z",
+    "original_purchase_date": "2023-01-01T00:00:00Z",
+    "purchase_date": "2023-01-01T00:00:00Z"
+  }
+};
+obj.subscriber.entitlements = {
+  "gold": {
+    "expires_date": "2099-12-31T23:59:59Z",
+    "product_identifier": "com.locket.gold.yearly"
+  }
+};
+$done({ body: JSON.stringify(obj) });
